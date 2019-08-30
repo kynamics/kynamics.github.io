@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<!-- A minimally complete HTML document for "Kynamics LLC" as the company's website.-->
+<!doctype html>
+<!-- a MINimally complete HTML document for "Kynamics LLC" as the company's website.-->
 <!-- Set the primary language of this HTML document. This is useful for search engines and tools for the visually impaired.-->
 <html lang="en-US">
     <head>
@@ -58,18 +58,39 @@
 	<!-- Article is a group of related content -->
         <article>
 
-	<video src="rabbit320.webm" controls>
-	<p> This would have shown a rabbit video.
+	<video controls loop muted autoplay>
+		<source src="rabbit320.webm" type="video/webm">
+		<source src="rabbit320.mp4" type="video/mp4">
+		<track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+	<p> This would have shown a rabbit video.</p>
 	</video>
 
         <p> This is the start of an awesome paragraph. Paragraph is a "block" element, that start a new visual block on
-        the web page.</p>
+	the web page.</p>
+
+	<form action="/my-handling-form-page" method="post">
+	  <div>
+	  	<label for="name">Name:</label>
+	  	<input type="text" id="name" name="user_name">
+	  </div>
+	  <div>
+	  	<label for="mail">E-mail:</label>
+	  	<input type="email" id="mail" name="user_mail">
+	  </div>
+	  <div>
+	  	<label for="msg">Message:</label>
+	  	<textarea id="msg" name="user_message"></textarea>
+	  </div>
+	  <div>
+	  	<button type="submit"> Send your message </button>
+	  </div>
+	</form>
 
 	<!-- The href example, including the title tag which appears on mouse-over -->
 	<p> I am creating a link to the
-	  <a href="http://www.mozilla.org/en-US/"
-	    title="The best place to find more information about Mozilla's mission and how to contribute">Mozilla web page.</a></p>
-        <h2>Chapter 1: The dark night</h2>
+	<a href="http://www.mozilla.org/en-US/"
+	title="The best place to find more information about Mozilla's mission and how to contribute">Mozilla web page.</a></p>
+	<h2>Chapter 1: The dark night</h2>
 
         <p>It was a dark night. Somewhere, an owl hooted. The rain lashed down on the ...</p>
 
@@ -90,6 +111,10 @@
 	to do battle, hoping that his distress call had made it through.</p>
 	<hr>
 
+	<svg width="300" height="200">
+	  	<rect width="100%" height="100%" fill="green"/>
+	</svg>
+
 	<p>Meanwhile, Harry was sitting at home, staring at his royalty
 	statement and pondering when the next spin off series would come out,
 	when an enchanted distress letter flew through his window and landed in
@@ -99,7 +124,25 @@
 	</article>
 
 	<article>
-	  <h2> The next article starts here.</a>
+	  <h2> The next article starts here. Embedding a youtube video.</a>
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/m2sTf8oJq_U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	  <h3> Hey we are going to put a responsive image here</h3>
+	  <img 
+	        srcset="img/elva-fairy-320w.jpg 320w,
+		        img/elva-fairy-480w.jpg 480w,
+			img/elva-fairy-800w.jpg 800w"
+	        sizes="(max-width: 320px) 280px,
+		       (max-width: 480px) 440px, 800px"
+	  	src="img/elva-original.jpg" 
+		alt="elva image">
+
+          <p> Showcasing the picture attribute. </p>
+	  <picture>
+  		<source media="(max-width: 799px)" srcset="img/elva-480w-close-portrait.jpg">
+  		<source media="(min-width: 800px)" srcset="img/elva-800w.jpg">
+  		<img src="img/elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+	</picture>
 	</article>
 	<!-- related content on the side -->
 	<aside>
