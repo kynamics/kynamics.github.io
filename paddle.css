@@ -1,0 +1,12 @@
+body {
+    height: 900 px;
+    width: 700 px;
+    background:#fff;
+}
+
+#gameDiv {
+    border: 1px;
+    margin: auto;
+    cursor: none;
+    background:#afafaf;
+}
