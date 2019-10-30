@@ -7,6 +7,9 @@ body {
 #gameDiv {
     border: 1px;
     margin: auto;
-    cursor: none;
-    background:#afafaf;
+    background:#faf9f9;
+}
+
+canvas {
+ /*   cursor: none; */
 }
