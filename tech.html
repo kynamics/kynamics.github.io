@@ -36,21 +36,17 @@
                         <div class="p-5">
                             <h2 class="display-4">Our Technology</h2>
                             <p>
-Kynamics was started to make use of AI to make it easier to interface with software. We realized that over time,
-software kept getting complex and that was reflected in a high nested UI design. This caused problems for most users who
-would always need help figuring out “how to do certain things”. </p>
+Talkbox comprises two components. </p>
 <br>
-
-<p>Our goal is to build the best on-device voice-based intelligent interface to your every day apps. </p>
+<p>
+First is a cloud pipeline that can train deep neural networks and optimize them for on-device execution. We use techniques such as quantization and nn-pruning to reduce the space requirement and also the execution time of the neural network. Our pipeline ensures negligible impact on the accuracy metric.
+</p>
 <br>
-
-<p>Our team consists of experienced engineers who have built voice-based AI at top companies in Silicon Valley. Their
-products are currently being used by more than a Billion people worldwide. </p>
-<br>
-
-<p>If you are an investor or would like to work with us, please send a note to: julie@kynamics.com</p>
-
-                            </p>
+<p>
+Second is a runtime that executes the optimized version of these neural networks via tight integration with the
+underlying GPU chipset in order to maximize performance. Performance is characterized through the metrics of power
+consumption (battery draw), CPU utilization and memory use. Our runtime allows optimum use of these resources thus,
+making the deep neural network always available on-device even when offline.  </p>
                         </div>
             </div>
         </header>
@@ -63,10 +59,9 @@ products are currently being used by more than a Billion people worldwide. </p>
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
-                            <h2 class="display-4">On-device, works offline.</h2>
-                            <p> The Talkbox layer allows the state-of-the-art neural networks (NLP, Vision, AGI) to run
-                            locally on your device (smartphone, tablet, watch). This means ultra-low latency and 100%
-                            uptime.
+                            <h2 class="display-4">Quantization.</h2>
+                            <p>
+                            Quantization refers to the idea of using a smaller resolution on the weight variables where possible. We utilize the tensorflow quantization system to use int16 or int32 instead of a double or a float for the internal weights of the network. Our pipeline compares the impact to ensure that the accuracy or the objective function of the network is negligibly impacted.
                             </p>
                         </div>
                     </div>
@@ -82,8 +77,10 @@ products are currently being used by more than a Billion people worldwide. </p>
                     </div>
                     <div class="col-lg-6">
                         <div class="p-5">
-                            <h2 class="display-4">Low cloud costs.</h2>
-                            <p>GPU-based Cloud can become very expensive very quickly. Since all of our AI runs locally on the device, there are negligible on-going cloud costs. Feedback and related data could optionally be aggregated to push a refined model downstream every update cycle (such as a few weeks/months).</p>
+                            <h2 class="display-4">Hardware optimizations.</h2>
+                            <p>
+                            Our runtime ensures that we take advantage of any GPU optimizations to run the neural network efficiently. The Adreno GPU line, part of the Snapdragon processors, exposes these functions via their neural network library which we take advantage of during runtime.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -98,12 +95,10 @@ products are currently being used by more than a Billion people worldwide. </p>
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
-                            <h2 class="display-4">Privacy and Security</h2>
-                            <p>On-device means your data always stays on the device. This offers the maximum possibly
-                            privacy for the users. Also from a cybersecurity perspective, this offers the lowest
-                            attack-surface and hence more secure than when the neural networks run on the cloud. 
-                            Optionally, some aggregate data could be transferred to the cloud to fine-tune the neural
-                            netowrks or for analytics. This is fully configurable and optional.</p>
+                            <h2 class="display-4">NN-pruning.</h2>
+                            <p>
+                            This refers to the technique of pruning chunks of a rather sparse neural network. NN-pruning is a well known technique that can result in significant reduction in neural network size and improve efficiency.
+                            </p>
                         </div>
                     </div>
                 </div>
