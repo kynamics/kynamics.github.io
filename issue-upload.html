@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kynamics Support Portal</title>
+    <style>
+        :root {
+            /* Federal/Talkbox Color Palette */
+            --primary-blue: #0f172a;  /* Dark Navy */
+            --accent-blue: #3b82f6;   /* Bright Blue */
+            --bg-gray: #f0f2f5;
+            --text-dark: #1e293b;
+            --border-color: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-gray);
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- Header Section --- */
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .sub-header {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        /* --- Main Content --- */
+        .main-container {
+            max-width: 800px;
+            width: 100%;
+            margin: 40px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border-top: 5px solid var(--accent-blue);
+        }
+
+        .info-banner {
+            background-color: #eff6ff;
+            border-bottom: 1px solid #bfdbfe;
+            padding: 20px 30px;
+        }
+
+        .info-banner h2 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: var(--primary-blue);
+        }
+
+        .info-banner p {
+            margin: 0;
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        /* --- Google Form Embed Responsive Wrapper --- */
+        .form-wrapper {
+            position: relative;
+            width: 100%;
+            height: 900px; /* Adjust based on form length */
+            overflow: hidden;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* --- Footer --- */
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #64748b;
+            background-color: #e2e8f0;
+        }
+
+        footer a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-area">KYNAMICS</div>
+            <div class="sub-header">SECURE SUPPORT PORTAL</div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="info-banner">
+            <h2>Submit a Support Ticket</h2>
+            <p>Use the form below to report issues or upload logs securely. <br>
+            <strong>Note:</strong> File uploads are limited to <strong>1 GB</strong> per submission. For larger files, please contact your project manager directly.</p>
+        </div>
+
+        <div class="form-wrapper">
+            <iframe 
+                src="https://forms.gle/qorAUUV6xKSbgRDe6" 
+                title="Kynamics Support Form">
+                Loading…
+            </iframe>
+        </div>
+        </div>
+
+    <footer>
+        <p>&copy; 2026 Kynamics. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Security Statement</a></p>
+        <p>System intended for official use. Unauthorized access is prohibited.</p>
+    </footer>
+
+</body>
+</html>
